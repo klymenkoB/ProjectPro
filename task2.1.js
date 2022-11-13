@@ -1,4 +1,8 @@
-// 1)  Написать свою функцию для глубокого копирования объектов. При этом алгоритм должен осуществляться вручную (никаких вариантов с использованием готовых библиотек и даже JSON.stringify() + JSON.parse(), за это сразу 0 баллов за первую задачу). Функция должна называться makeObjectDeepCopy. Принимать функция должна один параметр - объект, копию которого нужно сделать.  Функции можно не копировать
+// 1)  Написать свою функцию для глубокого копирования объектов. 
+// При этом алгоритм должен осуществляться вручную (никаких вариантов с 
+// использованием готовых библиотек и даже JSON.stringify() + JSON.parse(), 
+// за это сразу 0 баллов за первую задачу). Функция должна называться makeObjectDeepCopy. 
+// Принимать функция должна один параметр - объект, копию которого нужно сделать.  Функции можно не копировать
 
 // объекты могуть быть такими, например: 
 
@@ -28,18 +32,18 @@ let another_sample_object = {
     }
 }
 
-// let sample_object = {
-//     lev_1_first_key: "first_value",
-//     lev_1_second_key: 10,
-//     lev_1_third_key: {
-//         lev_2_first_key: "first_value",
-//         lev_2_second_key: [1, 2, { 1:22, 2:[5, 4 , 2 , 6 ,8] }, 4],
-//         lev_2_third_key: {
-//             lev_3_first_key: "first_value",
-//             lev_3_second_key: 30
-//         }
-//     }
-// }
+let sample_object = {
+    lev_1_first_key: "first_value",
+    lev_1_second_key: 10,
+    lev_1_third_key: {
+        lev_2_first_key: "first_value",
+        lev_2_second_key: [1, 2, { 1:22, 2:[5, 4 , 2 , 6 ,8] }, 4],
+        lev_2_third_key: {
+            lev_3_first_key: "first_value",
+            lev_3_second_key: 30
+        }
+    }
+}
 
   const cloneAnotherSampleObject = deepClone(another_sample_object);
   function deepClone(obj) {
